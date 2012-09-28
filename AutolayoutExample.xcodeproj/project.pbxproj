@@ -23,6 +23,7 @@
 		841A008B161642C400324512 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A0066161642C300324512 /* Foundation.framework */; };
 		841A0093161642C400324512 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 841A0091161642C400324512 /* InfoPlist.strings */; };
 		841A0096161642C400324512 /* AutolayoutExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 841A0095161642C400324512 /* AutolayoutExampleTests.m */; };
+		841A00AA161661FC00324512 /* UIView+SCConstraintsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 841A00A9161661FC00324512 /* UIView+SCConstraintsHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		841A0092161642C400324512 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		841A0094161642C400324512 /* AutolayoutExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutolayoutExampleTests.h; sourceTree = "<group>"; };
 		841A0095161642C400324512 /* AutolayoutExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutolayoutExampleTests.m; sourceTree = "<group>"; };
+		841A00A8161661FC00324512 /* UIView+SCConstraintsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SCConstraintsHelper.h"; sourceTree = "<group>"; };
+		841A00A9161661FC00324512 /* UIView+SCConstraintsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SCConstraintsHelper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				841A007D161642C400324512 /* ViewController.m */,
 				841A007F161642C400324512 /* ViewController.xib */,
 				841A006B161642C400324512 /* Supporting Files */,
+				841A00A8161661FC00324512 /* UIView+SCConstraintsHelper.h */,
+				841A00A9161661FC00324512 /* UIView+SCConstraintsHelper.m */,
 			);
 			path = AutolayoutExample;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				841A0071161642C400324512 /* main.m in Sources */,
 				841A0075161642C400324512 /* AppDelegate.m in Sources */,
 				841A007E161642C400324512 /* ViewController.m in Sources */,
+				841A00AA161661FC00324512 /* UIView+SCConstraintsHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
