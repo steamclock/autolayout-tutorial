@@ -59,19 +59,14 @@
         label.backgroundColor = [UIColor clearColor];
         label.translatesAutoresizingMaskIntoConstraints = NO;
         [tab addSubview:label];
+        [tab addEqualityConstraintOn:NSLayoutAttributeCenterX forSubview:label];
+        [tab addEqualityConstraintOn:NSLayoutAttributeBottom forSubview:label];
         
         if (i > 0) {
             prevTab = [tabs objectAtIndex:(i - 1)];
         }
 
-        NSDictionary* views = NSDictionaryOfVariableBindings(tab, prevTab, label);
-
-        [tab addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(5)-[label]-(5)-|"
-                                                                     options:0
-                                                                     metrics:0
-                                                                       views:views]];
-        
-        [tab addVisualConstraints:@"V:[label]|" forViews:views];
+        NSDictionary* views = NSDictionaryOfVariableBindings(tab, prevTab);
         
         if (i == 0) {
             // leftmost tab

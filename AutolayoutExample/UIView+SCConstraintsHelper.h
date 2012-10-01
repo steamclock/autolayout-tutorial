@@ -11,5 +11,6 @@
 @interface UIView (SCConstraintsHelper)
 
 - (void)addVisualConstraints:(NSString*)constraintString forViews:(NSDictionary*)views;
+- (void)addEqualityConstraintOn:(NSLayoutAttribute)attribute forSubview:(UIView*)subview;
 
 @end
