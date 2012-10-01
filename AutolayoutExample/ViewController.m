@@ -52,13 +52,27 @@
     for (int i = 0; i < tabs.count; i++) {
         UIView* tab = [tabs objectAtIndex:i];
         UIView* prevTab = tab;
+
+        UILabel* label = [UILabel new];
+        label.text = [tabNames objectAtIndex:i];
+        label.font = [UIFont boldSystemFontOfSize:10];
+        label.backgroundColor = [UIColor clearColor];
+        label.translatesAutoresizingMaskIntoConstraints = NO;
+        [tab addSubview:label];
         
         if (i > 0) {
             prevTab = [tabs objectAtIndex:(i - 1)];
         }
 
-        NSDictionary* views = NSDictionaryOfVariableBindings(tab, prevTab);
+        NSDictionary* views = NSDictionaryOfVariableBindings(tab, prevTab, label);
 
+        [tab addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(5)-[label]-(5)-|"
+                                                                     options:0
+                                                                     metrics:0
+                                                                       views:views]];
+        
+        [tab addVisualConstraints:@"V:[label]|" forViews:views];
+        
         if (i == 0) {
             // leftmost tab
             [tabBar addVisualConstraints:@"|[tab]" forViews:views];
