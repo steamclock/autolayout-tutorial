@@ -15,12 +15,11 @@
 
 @implementation ViewController
 
-// po [[UIWindow keyWindow] _autolayoutTrace]
+// Useful: po [[UIWindow keyWindow] _autolayoutTrace]
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 
     UIView* tabBar = [UIView new]; // new is shorthand for alloc then init
     tabBar.translatesAutoresizingMaskIntoConstraints = NO;
@@ -80,6 +79,8 @@
         
         [tabBar addVisualConstraints:@"V:|[tab]|" forViews:views];
     }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
